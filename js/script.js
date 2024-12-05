@@ -31,4 +31,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
       formElement.classList.remove("sign-up-active");
     }
   });
+
+  // fix header
+  const header = document.querySelector("header");
+  let lastScrolly = window.scrollY;
+
+  window.addEventListener("scroll", function () {
+    const currentScrolly = window.scrollY;
+
+    // check if at the top
+    if (currentScrolly === 0) {
+      header.classList.remove("header-fix");
+    } else if (currentScrolly === lastScrolly) {
+      header.classList.add("header-fix");
+    } else {
+      header.classList.remove("header-fix");
+    }
+    lastScrolly = currentScrolly;
+  });
 });
