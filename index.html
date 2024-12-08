@@ -3,113 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title -->
-    <title>Coffe Shop</title>
+    <title>Coffee Shop</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- fav-icon -->
-    <link rel="shorcut icon" href="images/fav-icon.png" />
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="images/fav-icon.png" />
+    <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(90deg, #a67f7f,#6b4f4f);
+        color: #fff;
+        padding: 20px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .nav-btns a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .nav-btns a:hover {
+        color: #ffd700;
+      }
+
+      /* Banner Section */
+      .banner {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        max-width: 1200px; /* Menetapkan lebar maksimal */
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .banner img {
+        width: 100%; /* Lebar gambar penuh pada area banner */
+        max-width: 80%; /* Atur lebar gambar tidak lebih dari 80% dari lebar container */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      }
+
+      .banner-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      .banner-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .banner-content .cta {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #6b4f4f;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .banner-content .cta:hover {
+        background-color: #a67f7f;
+      }
+
+      /* Responsiveness */
+      @media (max-width: 768px) {
+        .banner-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .banner-content p {
+          font-size: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- main -->
-    <sections id="main">
-      <!-- header -->
+    <!-- Main Section -->
+    <section id="main">
+      <!-- Header -->
       <header>
-        <!-- navigations -->
         <nav class="navigation">
-          <!-- menu btn -->
-          <input type="checkbox" class="menu-btn" id="menu-btn" />
-          <label for="menu-btn" class="menu-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              height="1em"
-              width="1em"
-            >
-              <path
-                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-              />
-            </svg>
-          </label>
-          <!-- menu -->
-          <div class="side-menu">
-            <div class="menu-container">
-              <strong>Main Links</strong>
-              <!-- close btn -->
-              <label for="menu-btn" class="close-btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                  height="1em"
-                  width="1em"
-                >
-                  <path
-                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-                  />
-                </svg>
-              </label>
-              <!-- menu list -->
-              <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Popular</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Recent</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- logo -->
+          <!-- Logo -->
           <a href="#" class="logo">
-            <img src="images/logo.png" alt="logo" />
+            <img src="images/logo.png" alt="Coffee Shop Logo" />
           </a>
-          <!-- nav btns -->
+          <!-- Navigation Buttons -->
           <div class="nav-btns">
-            <!-- search -->
-            <a href="javascript:void(0);" class="nav-search">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                />
-              </svg>
-            </a>
-            <!-- user -->
-            <a href="javascript:void(0);" class="nav-user">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                height="1em"
-                width="1em"
-              >
-                <path
-                  d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-                />
-              </svg>
-            </a>
-            <!-- cart -->
-            <a href="" class="nav-cart">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"
-                height="1em"
-                width="1em"
-              >
-                <path
-                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
-                />
-              </svg>
-              <span>0</span>
-            </a>
+            <a href="#">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#popular">Popular</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
           </div>
         </nav>
       </header>
+
+      <!-- Banner Section -->
+      <section class="banner">
+        <img src="images/banner-img.png" alt="Coffee Shop Banner" />
+        <div class="banner-content">
+          <h1>Welcome to Coffee Shop</h1>
+          <p>Discover the art of fine coffee and an unforgettable experience.</p>
+          <!-- Tombol Explore yang mengarah ke #home -->
+          <a href="#popular">
+            <button class="cta">Explore Now</button>
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <!-- Home Section -->
+    <!-- <section id="home">
+      <h2>Welcome to Our Coffee Shop</h2>
+      <p>Enjoy your coffee with the finest beans, crafted just for you.</p>
+    </section> -->
+  </body>
+</html>
+
 
       <!-- main content -->
       <div class="main-content">
@@ -118,11 +177,10 @@
           <strong>Coffee</strong>
           <h1>Enjoy <br />Your Morning <br />Coffee</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint esse,
-            consequuntur excepturi aut ipsam cumque!
+            "Nikmati sensasi rasa terbaik dari biji kopi pilihan, diracik dengan penuh cinta untuk pagi Anda yang sempurna."
           </p>
           <span>Rp 14.000</span>
-          <a href="#">Add to Cart</a>
+          <a href="#">Buy Now</a>
         </div>
         <!-- img -->
         <div class="main-content-img">
@@ -251,15 +309,15 @@
           <!-- box 1 -->
           <div class="product-box">
             <!-- img -->
-            <a href="#" class="product-box-img">
+            <a href="https://app.midtrans.com/payment-links/1733504689612" class="product-box-img">
               <img src="images/p1.png" alt="product" />
               <span>New</span>
             </a>
             <!-- text -->
             <div class="product-box-text">
-              <a href="#" class="product-text-title">Coffee Beans</a>
-              <span>Rp 20.000 <del>Rp 40.000</del></span>
-              <a href="#" class="product-cart-btn">
+              <a href="https://app.midtrans.com/payment-links/1733504689612" class="product-text-title">Golden Brew Beans</a>
+              <span>Rp 25.000 <del>Rp 50.000</del></span>
+              <a href="https://app.midtrans.com/payment-links/1733504689612" class="product-cart-btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
@@ -269,22 +327,22 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
           <!-- box 2 -->
           <div class="product-box">
             <!-- img -->
-            <a href="#" class="product-box-img">
+            <a href="https://app.midtrans.com/payment-links/1733504856449" class="product-box-img">
               <img src="images/p2.png" alt="product" />
               <span>New</span>
             </a>
             <!-- text -->
             <div class="product-box-text">
-              <a href="#" class="product-text-title">Coffee Beans</a>
-              <span>Rp 20.000 <del>Rp 40.000</del></span>
-              <a href="#" class="product-cart-btn">
+              <a href="https://app.midtrans.com/payment-links/1733504856449" class="product-text-title">Arabica Beans</a>
+              <span>Rp 30.000</span>
+              <a href="https://app.midtrans.com/payment-links/1733504856449" class="product-cart-btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
@@ -294,7 +352,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -319,7 +377,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -344,7 +402,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -369,7 +427,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -394,7 +452,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -464,7 +522,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -489,7 +547,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -514,7 +572,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -539,7 +597,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -586,7 +644,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -611,7 +669,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -636,7 +694,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -661,7 +719,7 @@
                   <path
                     d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
                   /></svg
-                >Add to Cart
+                >Buy Now
               </a>
             </div>
           </div>
@@ -671,27 +729,7 @@
         
     </section>
 
-    <!-- download app -->
-     <section id="download-app">
-      <!-- img -->
-       <div class="app-img">
-        <img src="images/mobile-app.jpg" alt="app">
-       </div>
-       <!-- text -->
-        <div class="download-app-text">
-          <strong>Download App</strong>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consectetur exercitationem, dignissimos odit eum ducimus voluptatibus porro debitis distinctio minus.</p>
-          <!-- btns -->
-           <div class="download-btns">
-            <a href="#">
-              <img src="images/appstore-btn.png" alt="app store">
-            </a>
-            <a href="#">
-              <img src="images/googleplay-btn.png" alt="app store">
-            </a>
-           </div>
-        </div>
-     </section>
+     
 
      <!-- blog -->
       <section id="blog">
@@ -776,8 +814,6 @@
                <a href="#" class="footer-logo">
                 <img src="images/logo.png" alt="logo">
                </a>
-               <!-- detail -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsum reiciendis sint provident fugit fuga.</p>
                 <!-- sosial box -->
                  <div class="footer-social">
                   <!-- facebook -->
@@ -785,11 +821,11 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="1em"  width="1em"  viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
                    </a>
                    <!-- instagram -->
-                   <a href="#">
+                   <a href="https://www.instagram.com/pwecoffee?igsh=YjBpbHR2dXN2NXV3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="1em"  width="1em"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                    </a>
                    <!-- whatsapp -->
-                   <a href="#">
+                   <a href="https://api.whatsapp.com/send/?phone=628114096469">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="1em"  width="1em" ><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
                    </a>
                  </div>
@@ -800,37 +836,37 @@
                 <strong>Main Link's</strong>
                 <ul>
                   <li><a href="#">Home</a></li>
-                  <li><a href="#">Popular</a></li>
-                  <li><a href="#">Recent</a></li>
-                  <li><a href="#">Shop</a></li>
-                  <li><a href="#">Collection</a></li>
+                  <li><a href="#recent-product">Shop</a></li>
+                  <li><a href="#popular">Popular</a></li>
+                  <li><a href="#blog">News</a></li>
+                  <li><a href="#recent-product">Recent</a></li>
                 </ul>
               </div>
              <!-- links -->
               <div class="footer-link-box">
                 <strong>Sosial Link's</strong>
                 <ul>
-                  <li><a href="#">Instagram</a></li>
+                  <li><a href="https://www.instagram.com/pwecoffee?igsh=YjBpbHR2dXN2NXV3">Instagram</a></li>
                   <li><a href="#">Facebook</a></li>
-                  <li><a href="#">Whatsapp</a></li>
+                  <li><a href="https://api.whatsapp.com/send/?phone=628114096469">Whatsapp</a></li>
                   <li><a href="#">Twitter</a></li>
                   <li><a href="#">Tiktok</a></li>
                 </ul>
               </div>
-              <!-- subscribe -->
-               <div class="footer-subscribe">
-                <strong>Subscribe Now</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, deserunt?</p>
-                <form class="subscribe-box">
-                  <input type="email" name="subscribe_email" placeholder="example@gmail.com" required>
-                  <button>Subscribe</button>
-                </form>
-               </div>
+              <!-- Address & Contact -->
+              <div class="footer-contact-info">
+                <strong>Contact Information</strong>
+                <ul>
+                  <li>Address: 123 Coffee Lane, Coffee City, CO 12345</li>
+                  <li>Email: contact@pwecoffee.com</li>
+                  <li>Phone: +1 (123) 456-7890</li>
+                  
+                </ul>
+              </div>
           </div>
           <!-- bottom -->
            <div class="footer-bottom">
-            <span>Created By Muammar</span>
-            <span>&copy; Copyright 2024 - Muammar </span>
+            <span>Created By Muammar | &copy; Copyright 2024 - Muammar </span>
            </div>
         </footer>
 
