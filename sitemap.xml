@@ -4,12 +4,13 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <url>
-    <loc>https://coffee-shop-amber-one.vercel.app/</loc>
-    <lastmod>2024-12-10T04:43:52+00:00</lastmod>
-    <priority>1.00</priority>
-    <changefreq>daily</changefreq>
-  </url>
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://coffee-shop-amber-one.vercel.app/</loc>
+  <lastmod>2024-12-10T05:37:50+00:00</lastmod>
+</url>
+
 
 </urlset>
