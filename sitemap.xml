@@ -12,20 +12,4 @@
     <changefreq>daily</changefreq>
   </url>
 
-  <url>
-    <loc>https://coffee-shop-amber-one.vercel.app/#popular</loc>
-    <lastmod>2024-12-10T04:43:52+00:00</lastmod>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://coffee-shop-amber-one.vercel.app/#services</loc>
-    <lastmod>2024-12-10T04:43:52+00:00</lastmod>
-    <priority>0.60</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  
-
 </urlset>
